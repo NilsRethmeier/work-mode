@@ -18,7 +18,7 @@ countdown()
 	clear
   done
   echo
-  spd-say 'work chunk done. Time to move!'
+  spd-say 'work chunk done. Time to move!' # let it talk at the end of a pomodoro. # comment (prepend #) out to not require the command
 )
 reset
 countdown "${1}"
