@@ -1,0 +1,26 @@
+# needs figlet
+# sudo apt install figlet
+
+countdown()
+(
+  IFS=:
+  set -- $*
+  secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} ))
+  while [ $secs -gt 0 ]
+  do
+    sleep 60 &
+	#time="$((secs/3600))h $(((secs/60)%60))m"
+	time="$(((secs/60)))m"
+	figlet -f standard -c $time 
+    secs=$(( $secs - 60 ))  # just minutes. No nervous seconds counter.
+    wait
+	clear
+  done
+  echo
+  spd-say 'work chunk done. Time to move!'
+)
+reset
+countdown "${1}"
+# run as ..
+# bash countdown "00:51:00"
+# .. to set the count down at 51 minutes
