@@ -1,2 +1,2 @@
 # work-mode
-scripts for focussed working
+minimal tools for focussed working
