@@ -1,5 +1,6 @@
-# needs figlet
-# sudo apt install figlet
+# needs figlet so run
+# sudo apt install figlet # for linux
+# brew install figlet # for macos
 
 countdown()
 (
